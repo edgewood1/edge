@@ -1,0 +1,18 @@
+--- 
+layout: page
+title: html
+category: html
+---
+
+ 
+
+<ul>
+    {% for post in site.posts %}
+    {% if post.categories contains "html"%}
+    <li>
+        <a href="{{ site.baseurl }}{{ post.url }}"> {{post.title}}</a>
+        <p>{{post.meta}}</p>
+    </li>
+    {% endif %}
+    {% endfor %}
+</ul>

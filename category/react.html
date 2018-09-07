@@ -1,0 +1,17 @@
+--- 
+layout: page
+title: React 
+category: react 
+---
+
+<ul>
+    {% for post in site.posts %}
+ 
+    {% if post.categories contains "react"%}
+    <li>
+        <a href="{{ site.baseurl }}{{ post.url }}"> {{post.title}}</a>
+        <p>{{post.meta}}</p>
+    </li>
+    {% endif %}
+    {% endfor %}
+</ul>

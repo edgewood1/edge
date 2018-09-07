@@ -1,0 +1,22 @@
+--- 
+layout: page
+title: css
+category: css
+---
+
+<!-- this uses the category layout, but it must be invoked below -->
+
+ 
+
+<ul>
+
+    {% for post in site.posts %}
+
+    {% if post.categories contains "css" %}
+    <li>
+        <a href="{{ site.baseurl }}{{ post.url }}"> {{post.title}}</a>
+        <p>{{post.meta}}</p>
+    </li>
+    {% endif %}
+    {% endfor %}
+</ul>
