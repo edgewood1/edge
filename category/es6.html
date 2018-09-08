@@ -1,12 +1,18 @@
 --- 
 layout: page
-title: react_fresh
-category: react_fresh
+title: es6
+category: es6
 ---
 
+<!-- this uses the category layout, but it must be invoked below -->
+
+ 
+
 <ul>
+
     {% for post in site.posts %}
-    {% if post.categories contains "react_fresh" %}
+
+    {% if post.categories contains "es6" %}
     <li>
         <a href="{{ site.baseurl }}{{ post.url }}"> {{post.title}}</a>
         <p>{{post.meta}}</p>
