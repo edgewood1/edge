@@ -25,10 +25,10 @@ pre.highlight {
   display: inline-block;
 word-break: break-word;
 }
-
+// code text itself
 code {
   font-family:'Bitstream Vera Sans Mono','Courier', monospace;
-
+  margin-right: 15%;
 }
 
 .highlight .c { color: #586E75 } /* Comment */
