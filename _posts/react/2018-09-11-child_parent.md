@@ -47,7 +47,8 @@ Here we render a few things:
         return(
             <div>
                 <Child setParent={this.setParent} />
-                <p>In parent, multiplied by 2: {this.state.clicks}</p>
+                <p>In parent, multiplied by 2: 
+                    {this.state.clicks}</p>
             </div>
         )
     }
@@ -89,7 +90,9 @@ Here, we render our button.  When it is pressed, it calls our Child interface, a
 ```javascript
     render() {
         return(
-            <button onClick={this.handleClick}>{this.state.click}</button>
+            <button onClick={this.handleClick}>
+                {this.state.click}
+            </button>
         )
     }
 }
