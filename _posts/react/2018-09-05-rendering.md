@@ -10,7 +10,7 @@ How do you render via React?
 
 Below are 11 ways.  After setting up the environment, add the following imports to . your index.js:
 
-```
+```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
 ```
@@ -22,11 +22,9 @@ A React element is a variable that contains JSX.  It is the “smallest building
 Elements make up components, but they are not themselves components.
 Below, we create an element that defines a tag, and we pass it to render():
 
-```
+```javascript
 const element = <h1> Damn! </h1>
-
 ReactDOM.render(element, document.getElementById('root'));
-
 ``` 
 
 Method 2:  Component Functions w/o Arguments
@@ -42,18 +40,17 @@ class components
 represent components via a capital initial enclosed in a self-closing tag.
 
 
-```
+```javascript
 function Element() {
     return (<h1> Damn! </h1>)
 }
 
 ReactDOM.render(<Element />, document.getElementById('root'));
-
 ```
 
 or rewriting the previous function for ES6:
 
-```
+```javascript
 var Element = () => {
      return (<h1> Damn! </h1>)
 }
@@ -69,7 +66,7 @@ defines the property (name) to the props object.
 3. Pass the element to the render():
 
 
-```
+```javascript
 var Element = (props) => {
     return (<h1> Damn! {props.name}</h1>)
 }
@@ -88,7 +85,7 @@ Because App contains Welcome, App is the parent and Welcome is the child compone
 Here, the child defines the actual tag whereas the parent represents it and assigns value to its prop.
 
 
-```
+```javascript
 function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
@@ -110,7 +107,7 @@ Method 5:  Component Classes
 
 Below, the class “copies” the properties and methods of React.Component module and adds a few more details: namely, the rendering of some JSX.
 
-```
+```javascript
 class Welcome extends React.Component {
    render() {
       return <h1>Hello </h1>;
@@ -129,7 +126,7 @@ The Parent class returns:
 The Child component
 the property definition its (example = “foo” /)
 
-```
+```javascript
 class Parent extends React.Component {
    render() {
       return (
@@ -159,7 +156,7 @@ Props cannot be changed
 
 But like props, we can define state in our class and display it in our JSX:
 
-```
+```javascript
 class Parent extends React.Component {
   state= {
      count: 0,
@@ -189,7 +186,7 @@ In the Parent, we:
 
 render the Child and assign the prop property:
 
-```
+```javascript
 class Parent extends React.Component {
    render() {
       return (
@@ -227,7 +224,7 @@ returns a button, which, when clicked, will fire the now function and display th
 The parent renders the Child, passing in the props.title value
 
  
-```
+```javascript
 class Parent extends React.Component {
 
    render() {
@@ -262,6 +259,8 @@ ReactDOM.render(<Parent/>, document.getElementById('root'));
 method 10: using constructor()
 
 method 11: passing from Child to Parent (reverse of the norm) using a callback:
+
+```javascript
 class Parent extends React.Component {
     
     myCallback = (dataFromChild) => {
@@ -309,6 +308,7 @@ class Child extends React.Component{
 
 ReactDOM.render(<Parent />, document.getElementById('root'));
 
+```
 Process
   Parent calls child, passing a callback in callbackFromParent
   Child renders form whose value is this.state.value or “” (and is thus controlled)
