@@ -8,6 +8,8 @@ pre.highlight {
   // box-shadow: 3px 3px rgba(0,0,0,0.1);
   margin: 0px 0 0px 0;
   // overflow: auto;
+  display: inline-block;
+  word-break: break-word;
   overflow-wrap: break-word;
   width: 90%;
   margin-right: 10%;
@@ -17,6 +19,8 @@ pre.highlight {
   border: none;
   box-shadow: none;
   overflow-wrap: break-word;
+  display: inline-block;
+word-break: break-word;
 }
 
 code {
