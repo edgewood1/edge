@@ -24,6 +24,7 @@ pre.highlight {
   overflow-wrap: break-word;
   display: inline-block;
   word-break: break-word;
+  border: 2% solid black;
 }
 // code text itself
 code {
@@ -32,6 +33,9 @@ code {
   min-width: 75%;
   padding-right: 15%;
   border: 2% solid black;
+  overflow-wrap: break-word;
+  // display: inline-block;
+  word-break: break-word;
 }
 
 .highlight .c {
